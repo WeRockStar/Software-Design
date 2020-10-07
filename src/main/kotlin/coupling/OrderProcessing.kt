@@ -1,11 +1,11 @@
+package coupling
+
 class OrderProcessing(val dbConnection: DbConnection, val dbConfig: DbConfig) {
 
 	val rating = Rating()
 	val customerWallet = CustomerWallet()
 
-	fun getById(id: String, status: String): Order {
-		return Order("1", "Clean Code", 12000.0f)
-	}
+	fun getById(id: String, status: String): Order = Order("1", "Clean Code", 12_000.0f)
 
 	fun cancelOrder(id: String, reason: String, customerId: String) {
 		val db = DbManager(dbConnection, dbConfig)

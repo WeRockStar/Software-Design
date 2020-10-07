@@ -1,3 +1,5 @@
+package coupling
+
 class CustomerManager {
 
 	private val config = DbConfig("ODDS", "WORKING-SOFTWARE", "https://url.com")
@@ -41,17 +43,13 @@ class CustomerManager {
 		connection.disconnect()
 	}
 
-	fun getOrder(id: String): Order {
-		return orderProcessing.getById(id, "SUCCESS")
-	}
+	fun getOrder(id: String): Order = orderProcessing.getById(id, "SUCCESS")
 
 	fun cancelOrder() {
 		orderProcessing.cancelOrder("1", "Too late shipping", "123")
 	}
 
-	fun getRating(): Int {
-		return orderProcessing.rating.getRatingBy("1")
-	}
+	fun getRating(): Double = orderProcessing.rating.rates.average()
 
 	fun renewOrder() {
 		orderProcessing.renew("1")
