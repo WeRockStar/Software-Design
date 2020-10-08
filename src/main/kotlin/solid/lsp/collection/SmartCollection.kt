@@ -1,4 +1,4 @@
-package solid.lsp
+package solid.lsp.collection
 
 interface SmartCollection {
 	fun add()
