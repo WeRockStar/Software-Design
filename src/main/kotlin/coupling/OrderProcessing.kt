@@ -25,4 +25,9 @@ class OrderProcessing(val dbConnection: DbConnection, val dbConfig: DbConfig) {
 	}
 }
 
-class Order(val id: String, val name: String, val price: Float)
+class Order(val id: String, val name: String, val price: Float) {
+
+	fun getTotal(): Float {
+		return price * 1.07f
+	}
+}

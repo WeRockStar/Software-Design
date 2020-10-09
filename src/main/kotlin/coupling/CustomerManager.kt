@@ -1,11 +1,17 @@
 package coupling
 
+import decoupling.Customer
+
 class CustomerManager {
 
-	private val config = DbConfig("ODDS", "WORKING-SOFTWARE", "https://url.com")
-	private val connection = DbConnection()
-	private val orderProcessing: OrderProcessing = OrderProcessing(connection, config)
-	private val dbManager: DbManager = DbManager(connection, config)
+	var config = DbConfig("ODDS", "WORKING-SOFTWARE", "https://url.com")
+	var connection = DbConnection()
+	var orderProcessing: OrderProcessing = OrderProcessing(connection, config)
+	var dbManager: DbManager = DbManager(connection, config)
+
+	fun getCustomers(): Customer {
+		return Customer()
+	}
 
 	fun addCustomer() {
 		connection.connect()
