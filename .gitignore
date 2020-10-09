@@ -28,6 +28,7 @@ hs_err_pid*
 ### Java template
 # Compiled class file
 *.class
+build
 
 # Log file
 *.log

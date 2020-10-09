@@ -2,7 +2,9 @@ package question.cohesion
 
 import coupling.Order
 
-// Option 1
+/**
+ * Option 1
+ */
 class Customer1 {
 	fun addCustomer() {}
 
@@ -15,7 +17,9 @@ class Customer1 {
 	fun cancelCustomerOrder() {}
 }
 
-// Option 2
+/**
+ * Option 2
+ */
 class Customer2 {
 	fun addCustomer() {}
 
