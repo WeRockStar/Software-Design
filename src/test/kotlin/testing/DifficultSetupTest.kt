@@ -14,6 +14,7 @@ class DifficultSetupTest {
 		val fakeConnection = DbConnection()
 		val fakeDbManager = DbManager(fakeConnection, fakeConfig)
 		val manager = CustomerManager()
+
 		manager.config = fakeConfig
 		manager.connection = fakeConnection
 		manager.dbManager = fakeDbManager
